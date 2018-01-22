@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from "react-redux";
-import Words from './Words';
+import Round from './Round';
+import Login from './Login';
+
+
 
 class App extends Component {
   render() {
@@ -10,10 +13,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">5 Words</h1>
+          <h1 className="App-title">Le jeu des 5 mots</h1>
         </header>
-        {this.props.userName}
-        <Words/>
+        {this.props.userName
+          ? ( <Round />
+          )
+          : (<Login/>)}
 
       </div>
     );
@@ -21,7 +26,8 @@ class App extends Component {
 }
 function mapStateToProps(state) {
   return {
-    userName: state.userName
+    userName: state.userName,
+    p1Word5: state.p1Word5
   }
 }
 
