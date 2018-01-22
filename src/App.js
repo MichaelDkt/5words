@@ -4,8 +4,9 @@ import './App.css';
 import { connect } from "react-redux";
 import Round from './Round';
 import Login from './Login';
-
-
+import Player1 from './Player1';
+import Player2 from './Player2';
+import {Route, Switch, withRouter } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -15,11 +16,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Le jeu des 5 mots</h1>
         </header>
-        {this.props.userName
-          ? ( <Round />
-          )
-          : (<Login/>)}
 
+        <Switch>
+          <Route exact path="/" component={Login}/>
+          <Route path="/player1" component={Player1}/>
+          <Route path="/player2" component={Player2}/>
+        </Switch>
+        
       </div>
     );
   }
@@ -31,4 +34,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));
