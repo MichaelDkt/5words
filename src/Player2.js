@@ -13,18 +13,16 @@ function Player2(props) {
     }}>
 
     <div>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Mots</th>
-            <th scope="col">{props.userName}</th>
-            <th scope="col">{props.userName2}</th>
+            <th scope="col">Joueur 2 : {props.userName2}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">{props.word1}</th>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J2"/></td>
             <td>
               <input
                 type="text"
@@ -35,7 +33,6 @@ function Player2(props) {
           </tr>
           <tr>
             <th scope="row">{props.word2}</th>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J2"/></td>
             <td>
               <input
                 type="text"
@@ -46,7 +43,6 @@ function Player2(props) {
           </tr>
           <tr>
             <th scope="row">{props.word3}</th>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J2"/></td>
             <td>
               <input
                 type="text"
@@ -57,7 +53,6 @@ function Player2(props) {
           </tr>
           <tr>
             <th scope="row">{props.word4}</th>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J2"/></td>
             <td>
               <input
                 type="text"
@@ -68,7 +63,6 @@ function Player2(props) {
           </tr>
           <tr>
             <th scope="row">{props.word5}</th>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J2"/></td>
             <td>
               <input
                 type="text"

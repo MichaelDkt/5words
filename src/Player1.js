@@ -2,6 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 
 function Player1(props) {
+  console.log(props.p1Word1);
+  console.log(props.p1Word2);
+  console.log(props.p1Word3);
+  console.log(props.p1Word4);
+  console.log(props.p1Word5);
+
+
   return (
     <form className="Login" onSubmit={event => {
       event.preventDefault();
@@ -13,12 +20,11 @@ function Player1(props) {
     }}>
 
     <div>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Mots</th>
-            <th scope="col">{props.userName}</th>
-            <th scope="col">{props.userName2}</th>
+            <th scope="col">Joueur 1 : {props.userName}</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +37,6 @@ function Player1(props) {
                 value={props.p1Word1InputValue}
               />
             </td>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J1"/></td>
           </tr>
           <tr>
             <th scope="row">{props.word2}</th>
@@ -42,7 +47,6 @@ function Player1(props) {
                 value={props.p1Word2InputValue}
               />
             </td>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J1"/></td>
           </tr>
           <tr>
             <th scope="row">{props.word3}</th>
@@ -53,7 +57,6 @@ function Player1(props) {
                 value={props.p1Word3InputValue}
               />
             </td>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J1"/></td>
           </tr>
           <tr>
             <th scope="row">{props.word4}</th>
@@ -64,7 +67,6 @@ function Player1(props) {
                 value={props.p1Word4InputValue}
               />
             </td>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J1"/></td>
           </tr>
           <tr>
             <th scope="row">{props.word5}</th>
@@ -75,18 +77,11 @@ function Player1(props) {
                 value={props.p1Word5InputValue}
               />
             </td>
-            <td><input type="text" readonly class="form-control-plaintext" value="Attente J1"/></td>
           </tr>
         </tbody>
       </table>
     <button type="submit" className="btn btn-info">Valider</button>
     </div>
-    {props.p1Word1}
-    {props.p1Word2}
-    {props.p1Word3}
-    {props.p1Word4}
-    {props.p1Word5}
-
   </form>
   );
 }

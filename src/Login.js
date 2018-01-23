@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import Player1 from './Player1';
-import { Link } from "react-router-dom";
 
 
 function Login(props) {
